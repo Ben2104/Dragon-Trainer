@@ -1,22 +1,18 @@
 from dragon import Dragon
-from flying import Flying
+from flying import FlyingMixin
 from random import randint
 
-class Flying_Dragon(Dragon, Flying):
-    '''Represents the Flying Dragon'''
+class FlyingDragon(Dragon, FlyingMixin):
+    '''Flying Dragon class represents a flying dragon inherits from Dragon and FlyingMixin'''
 
     def __init__(self):
         '''Sets initial flying dragon stats'''
         super().__init__("Timberjack", 10, 3)
-        
 
     def special_attack(self, opponent):
         '''Uses a random special move from FlyingMixin'''
         move_choice = randint(0, 1)
         if move_choice == 0:
             return self.swoop(opponent)
-        elif move_choice == 1:
-            return self.windblast(opponent)
         else:
-            # This should never occur
-            print("An error has occured with Flying Dragon.")
+            return self.windblast(opponent)

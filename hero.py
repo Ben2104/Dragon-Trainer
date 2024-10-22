@@ -10,11 +10,11 @@ class Hero(Entity):
         '''represents the basic attack of the hero'''
         dmg = randint(1, 6) + randint(1, 6)
         opponent.take_damage(dmg)
-        return f"{self._name} slashes the {opponent.name} with their sword for {dmg} damage"
+        return f"{self.name} slashes the {opponent.name} with their sword for {dmg} damage"
     
     def special_attack(self, opponent):
         '''represents the special attack of the hero'''
         dmg = randint(1,12)
         opponent.take_damage(dmg)
-        return f"{self._name} hits the {opponent.name} with an arrow for {dmg} damage!"
+        return f"{self.name} hits the {opponent.name} with an arrow for {dmg} damage!"
         
