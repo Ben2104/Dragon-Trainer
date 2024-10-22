@@ -1,14 +1,18 @@
 from dragon import Dragon
-from fire import Fire
+from fire import FireMixin
 from random import randint
-class FireDragon(Dragon, Fire):
-    '''FireDragon class represents a fire dragon inherits from dragon and fire Mixin'''
+class FireDragon(Dragon, FireMixin):
+    '''Fire Dragon class represents a fire dragon inherits from Dragon and FireMixin'''
+
     def __init__(self):
-        super().__init__(name = "Gronkle", max_hp = 15, num_sp = 3)
+        '''Sets initial fire dragon stats'''
+        super().__init__("Gronkle", 15, 3)
+
     def special_attack(self, opponent):
-        attack = randint(1,2)
-        if attack == 1:
-            return self.fireblast(opponent)
+        '''Uses a random special move from FireMixin'''
+        attack = randint(0,1)
+        if attack == 0:
+            return self.fireblast(opponent) 
         else:
             return self.fireball(opponent)
         
