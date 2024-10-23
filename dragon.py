@@ -17,7 +17,7 @@ class Dragon(Entity, abc.ABC):
     def basic_attack(self, opponent):
         dmg = random.randint(3,7)
         opponent.take_damage(dmg)
-        return f"{self._name} smashes you with its tail for {dmg} damge"
+        return f"{self._name} smashes you with its tail for {dmg} damage"
     @abc.abstractmethod
     def special_attack(self, opponent):
         pass
