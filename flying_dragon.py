@@ -1,8 +1,8 @@
 from dragon import Dragon
-from flying import Flying
+from flying import FlyingMixin
 from random import randint
 
-class Flying_Dragon(Dragon, Flying):
+class Flying_Dragon(Dragon, FlyingMixin):
     '''Represents the Flying Dragon'''
 
     def __init__(self):

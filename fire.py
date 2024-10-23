@@ -1,5 +1,5 @@
 from random import randint
-class Fire:
+class FireMixin:
     '''Mixin class Fire represents the special attacks'''
     def fireblast(self, opponent):
         '''fireblast method'''

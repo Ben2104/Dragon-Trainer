@@ -1,7 +1,7 @@
 from dragon import Dragon
-from fire import Fire
+from fire import FireMixin
 from random import randint
-class FireDragon(Dragon, Fire):
+class FireDragon(Dragon, FireMixin):
     '''FireDragon class represents a fire dragon inherits from dragon and fire Mixin'''
     def __init__(self):
         super().__init__(name = "Gronkle", max_hp = 15, num_sp = 3)

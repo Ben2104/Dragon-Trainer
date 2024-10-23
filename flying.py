@@ -1,6 +1,6 @@
 from random import randint
 
-class Flying:
+class FlyingMixin:
     '''Mixin that can give a class access to flying special attacks'''
 
     def swoop(self, opponent):

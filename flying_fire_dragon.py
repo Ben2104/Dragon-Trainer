@@ -1,8 +1,8 @@
 from dragon import Dragon
-from fire import Fire
-from flying import Flying
+from fire import FireMixin
+from flying import FlyingMixin
 from random import randint
-class FlyingFireDragon(Dragon, Fire, Flying):
+class FlyingFireDragon(Dragon, FireMixin, FlyingMixin):
     def __init__(self):
         super().__init__("Deadly Nadder", 20, 2)
     def special_attack(self, opponent):
